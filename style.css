@@ -4,7 +4,7 @@ body {
 
 .sunGlass {
     height: 220px;
-    width: 350px;
+    width: 435px;
 }
 
 header {
@@ -33,6 +33,13 @@ main {
 }
 
 button {
+    margin: 7px;
     height: 50px;
-    width: 50px;
+    width: 100px;
+
+    font-weight: bold;
+    font-size: small;
+
+    color: firebrick;
+    background-color: whitesmoke;
 }
