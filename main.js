@@ -1,11 +1,11 @@
 
-const cookieClicker = document.querySelector(`.cookieImg`)
-let cookies = 0;
+const sunGlassClicker = document.querySelector(`.sunGlass`)
+let speed = 0;
 
-cookieClicker.addEventListener(`click`, function(){
-    if (cookieClicker) {
-        cookies++;
+sunGlassClicker.addEventListener(`click`, function(){
+    if (sunGlassClicker) {
+        speed++;
     }
-    document.querySelector(`#score`).innerHTML = cookies;
+    document.querySelector(`#score`).innerHTML = speed;
 })
 
