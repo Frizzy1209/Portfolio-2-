@@ -31,3 +31,8 @@ main {
     justify-content: center;
     align-items: center;
 }
+
+button {
+    height: 50px;
+    width: 50px;
+}
