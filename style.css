@@ -1,0 +1,33 @@
+body {
+    background-color: palevioletred;
+}
+
+.cookieImg {
+    height: 250px;
+    width: 250px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: xxx-large;
+    font-weight: bold;
+}
+
+.headerParagraph {
+    font-size: large;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
