@@ -28,6 +28,7 @@ btn1.addEventListener(`click`, function (){
     if (speed >= (10)) {
         speed = speed - (10);
         img.src = `Level2.png`;
+        btn1.innerHTML = "Gotcha";
     }
     document.querySelector(`#score`).innerHTML = speed;
 })
