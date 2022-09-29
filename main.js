@@ -43,3 +43,5 @@ btn5.addEventListener(`click`, function (){
 btn6.addEventListener(`click`, function (){
     img.src = `Level6.png`;
 })
+
+
