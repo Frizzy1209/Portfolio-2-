@@ -5,6 +5,7 @@ body {
 .sunGlass {
     height: 220px;
     width: 435px;
+    cursor: pointer;
 }
 
 header {
@@ -16,13 +17,20 @@ header {
 }
 
 h1 {
+    font-family: sportyporegular;
     font-size: xxx-large;
     font-weight: bold;
 }
 
+main {
+    font-family: fast-trackregular;
+    font-weight: normal;
+    font-size: 17px;
+}
+
 .headerParagraph {
-    font-size: large;
-    font-weight: bold;
+    font-family: fast-trackregular;
+    font-size: 25px;
 }
 
 main {
@@ -33,17 +41,42 @@ main {
 }
 
 button {
-    margin: 7px;
-    height: 50px;
-    width: 100px;
-
-    font-weight: bold;
-    font-size: small;
-
-    color: firebrick;
-    background-color: whitesmoke;
+    background-color: #1883ba;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    color: greenyellow;
+    cursor: pointer;
+    font-family: fast-trackregular;
+    padding: 7px 20px;
+    text-align: center;
+    transition: all 250ms;
+    border: 0;
+    font-size: 17px;
+    touch-action: manipulation;
 }
 
-.streetCredBtn {
-
+button:hover {
+    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
 }
+
+
+/* Custom fonts */
+@font-face {
+    font-family: 'sportyporegular';
+    src: url('SportypoFont/sportypo-reguler-demo-webfont.woff2') format('woff2'),
+    url('SportypoFont/sportypo-reguler-demo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'fast-trackregular';
+    src: url('FastTrackFont/fast-track-webfont.woff2') format('woff2'),
+    url('FastTrackFont/fast-track-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+

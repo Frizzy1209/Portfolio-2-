@@ -1,5 +1,5 @@
 
-// The Clicker
+// The Clicker -----
 
 const sunGlassClicker = document.querySelector(`.sunGlass`)
 let speed = 0;
@@ -12,7 +12,8 @@ sunGlassClicker.addEventListener(`click`, function(){
 })
 
 
-// Upgrade Buttons
+
+// Upgrade Buttons -----
 
 let img = document.querySelector(`.sunGlass`)
 
@@ -71,20 +72,36 @@ btn5.addEventListener(`click`, function (){
 
 
 
-// Auto Clicker
+// Auto Clicker -----
 
 let autoClicker = 0;
 
 let autoUpdateBtn = document.querySelector(`#streetCredBtn`)
 
 autoUpdateBtn.addEventListener(`click`, function (){
-    if (speed >= ((autoClicker + 1) * 12)) {
-        speed = speed - (autoClicker + 1) * 12;
+    if (speed >= ((autoClicker + 1) * 50)) {
+        speed = speed - (autoClicker + 1) * 50;
         autoClicker = autoClicker + 1;
     }
     document.querySelector(`#score`).innerHTML = speed;
     document.querySelector(`#streetCredLevel`).innerHTML = autoClicker;
-    document.querySelector(`#nextLevelCost`).innerHTML = (autoClicker + 1) * 12;
+    document.querySelector(`#nextLevelCost`).innerHTML = (autoClicker + 1) * 50;
 })
 
 
+
+// Multi Clicker -----
+
+let multiClicker = 0;
+
+let multiClickBtn = document.querySelector(`#multiClickBtn`)
+
+multiClickBtn.addEventListener(`click`, function (){
+    if (speed >= ((multiClicker + 1) * 25)) {
+        speed = speed - (multiClicker + 1) * 25;
+        multiClicker = multiClicker + 1;
+    }
+    document.querySelector(`#score`).innerHTML = speed;
+    document.querySelector(`#multiClick`).innerHTML = multiClicker;
+    document.querySelector(`#multiClickCost`).innerHTML = (multiClicker + 1) * 25;
+})
