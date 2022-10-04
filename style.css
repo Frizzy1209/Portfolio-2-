@@ -1,5 +1,6 @@
 body {
-    background-color: palevioletred;
+    background-image: url("GradientPink.jpg");
+    background-size: auto;
 }
 
 .sunGlass {
@@ -23,7 +24,7 @@ h1 {
 
     margin-bottom: 1px;
     padding: 5px;
-    background: -webkit-linear-gradient(#13c8f5, #12b402);
+    background: -webkit-linear-gradient(#00b3e0, #5eff4a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
