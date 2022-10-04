@@ -18,19 +18,27 @@ header {
 
 h1 {
     font-family: sportyporegular;
-    font-size: xxx-large;
+    font-size: 60px;
     font-weight: bold;
+
+    margin-bottom: 1px;
+    padding: 5px;
+    background: -webkit-linear-gradient(#13c8f5, #12b402);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 main {
     font-family: fast-trackregular;
     font-weight: normal;
-    font-size: 17px;
+    font-size: 20px;
+    color: white;
 }
 
 .headerParagraph {
     font-family: fast-trackregular;
-    font-size: 25px;
+    font-size: 27px;
+    color: white;
 }
 
 main {
@@ -39,6 +47,7 @@ main {
     justify-content: center;
     align-items: center;
     position: relative;
+
 }
 
 
@@ -110,3 +119,4 @@ button:hover {
     font-weight: normal;
     font-style: normal;
 }
+
