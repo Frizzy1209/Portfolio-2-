@@ -28,7 +28,7 @@ btn1.addEventListener(`click`, function (){
     if (speed >= (10)) {
         speed = speed - (10);
         img.src = `Level2.png`;
-        btn1.innerHTML = "Gotcha";
+        btn1.style.display = "none";
     }
     document.querySelector(`#score`).innerHTML = speed;
 })
@@ -37,6 +37,7 @@ btn2.addEventListener(`click`, function (){
     if (speed >= (20)) {
         speed = speed - (20);
         img.src = `Level3.1.png`;
+        btn2.style.display = "none";
     }
     document.querySelector(`#score`).innerHTML = speed;
 })
@@ -45,6 +46,7 @@ btn3.addEventListener(`click`, function (){
     if (speed >= (30)) {
         speed = speed - (30);
         img.src = `Level4.png`;
+        btn3.style.display = "none";
     }
     document.querySelector(`#score`).innerHTML = speed;
 })
@@ -53,6 +55,7 @@ btn4.addEventListener(`click`, function (){
     if (speed >= (40)) {
         speed = speed - (40);
         img.src = `Level5.png`;
+        btn4.style.display = "none";
     }
     document.querySelector(`#score`).innerHTML = speed;
 })
@@ -61,6 +64,7 @@ btn5.addEventListener(`click`, function (){
     if (speed >= (50)) {
         speed = speed - (50);
         img.src = `Level6.png`;
+        btn5.style.display = "none";
     }
     document.querySelector(`#score`).innerHTML = speed;
 })
@@ -69,20 +73,18 @@ btn5.addEventListener(`click`, function (){
 
 // Auto Clicker
 
-let speedCount = 0;
 let autoClicker = 0;
 
-autoUpdateBtn = document.querySelector(`#autoUpdate`)
+let autoUpdateBtn = document.querySelector(`#streetCredBtn`)
 
 autoUpdateBtn.addEventListener(`click`, function (){
-    if (speed >= (20)) {
-        speed = speed - (20)
+    if (speed >= ((autoClicker + 1) * 12)) {
+        speed = speed - (autoClicker + 1) * 12;
+        autoClicker = autoClicker + 1;
     }
     document.querySelector(`#score`).innerHTML = speed;
+    document.querySelector(`#streetCredLevel`).innerHTML = autoClicker;
+    document.querySelector(`#nextLevelCost`).innerHTML = (autoClicker + 1) * 12;
 })
 
 
-function timer() {
-    speedCount = speedCount + autoClicker;
-}
-setInterval(timer, 2000)
