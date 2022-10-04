@@ -38,7 +38,39 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
+
+
+.streetCred {
+    padding: 7px 20px;
+    border-radius: 100px;
+    border: 0;
+
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 800px;
+}
+
+.multiClick {
+    padding: 7px 20px;
+    border-radius: 100px;
+    border: 0;
+
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 800px;
+}
+
+
 
 button {
     background-color: #ffe7e7;
@@ -78,6 +110,3 @@ button:hover {
     font-weight: normal;
     font-style: normal;
 }
-
-
-
