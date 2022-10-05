@@ -122,7 +122,6 @@ const autoCLickButton = document.querySelector(`#autoClickBtn`)
 const levelAutoClick = document.querySelector(`#autoClickLevel`)
 const costAutoCLick = document.querySelector(`#autoClickCost`)
 
-
 autoCLickButton.addEventListener(`click`, function ()
 {
     if (speed >= ((autoClicker + 1) * 75))
@@ -158,6 +157,7 @@ const multiClickBtn = document.querySelector(`#multiClickBtn`)
 const amountOfMultiCLick = document.querySelector(`#multiClick`)
 const costOfMultiClick = document.querySelector(`#multiClickCost`)
 
+
 multiClickBtn.addEventListener(`click`, function ()
 {
     if (speed >= ((multiClicker + 1) * 10))
@@ -165,6 +165,10 @@ multiClickBtn.addEventListener(`click`, function ()
         speed = speed - (multiClicker + 1) * 10;
         multiClicker = multiClicker + 1;
     }
+        sunGlassClicker.addEventListener(`click`, function ()
+        {
+            speed++
+        })
     totalSpeedScore.innerHTML = speed;
     amountOfMultiCLick.innerHTML = multiClicker;
     costOfMultiClick.innerHTML = (multiClicker + 1) * 10;
