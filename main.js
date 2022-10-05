@@ -1,107 +1,176 @@
 
+// The constants that will be used multible times
+
+const totalSpeedScore = document.querySelector(`#score`)
+
+const sunGlassClicker = document.querySelector(`#sunGlass`)
+
+
+
+
 // The Clicker -----
 
-const sunGlassClicker = document.querySelector(`.sunGlass`)
 let speed = 0;
 
-sunGlassClicker.addEventListener(`click`, function(){
-    if (sunGlassClicker) {
+sunGlassClicker.addEventListener(`click`, function()
+{
+    if (sunGlassClicker)
+    {
         speed++;
     }
-    document.querySelector(`#score`).innerHTML = speed;
+    totalSpeedScore.innerHTML = speed;
 })
+
+
+
 
 
 
 // Upgrade Buttons -----
-
-let img = document.querySelector(`.sunGlass`)
-
-/* let btn1 = document.querySelector(`#btn1`) */
-let btn1 = document.querySelector(`#btn1`)
-let btn2 = document.querySelector(`#btn2`)
-let btn3 = document.querySelector(`#btn3`)
-let btn4 = document.querySelector(`#btn4`)
-let btn5 = document.querySelector(`#btn5`)
+// The buttons that lets you change teh sunglasses
 
 
-btn1.addEventListener(`click`, function (){
-    if (speed >= (10)) {
+const img = document.querySelector(`#sunGlass`)
+
+const btn1 = document.querySelector(`#btn1`)
+const btn2 = document.querySelector(`#btn2`)
+const btn3 = document.querySelector(`#btn3`)
+const btn4 = document.querySelector(`#btn4`)
+const btn5 = document.querySelector(`#btn5`)
+
+
+// First upgrade button - tha changes the sunglasses
+
+btn1.addEventListener(`click`, function ()
+{
+    if (speed >= (10))
+    {
         speed = speed - (10);
         img.src = `Level2.png`;
         btn1.style.display = "none";
     }
-    document.querySelector(`#score`).innerHTML = speed;
+    totalSpeedScore.innerHTML = speed;
 })
 
-btn2.addEventListener(`click`, function (){
-    if (speed >= (20)) {
+// Second upgrade button - tha changes the sunglasses
+
+btn2.addEventListener(`click`, function ()
+{
+    if (speed >= (20))
+    {
         speed = speed - (20);
         img.src = `Level3.1.png`;
         btn2.style.display = "none";
     }
-    document.querySelector(`#score`).innerHTML = speed;
+    totalSpeedScore.innerHTML = speed;
 })
 
-btn3.addEventListener(`click`, function (){
-    if (speed >= (30)) {
+// Third upgrade button - tha changes the sunglasses
+
+btn3.addEventListener(`click`, function ()
+{
+    if (speed >= (30))
+    {
         speed = speed - (30);
         img.src = `Level4.png`;
         btn3.style.display = "none";
     }
-    document.querySelector(`#score`).innerHTML = speed;
+    totalSpeedScore.innerHTML = speed;
 })
 
-btn4.addEventListener(`click`, function (){
-    if (speed >= (40)) {
+// Forth upgrade button - tha changes the sunglasses
+
+btn4.addEventListener(`click`, function ()
+{
+    if (speed >= (40))
+    {
         speed = speed - (40);
         img.src = `Level5.png`;
         btn4.style.display = "none";
     }
-    document.querySelector(`#score`).innerHTML = speed;
+    totalSpeedScore.innerHTML = speed;
 })
 
-btn5.addEventListener(`click`, function (){
-    if (speed >= (50)) {
+// Fifth upgrade button - tha changes the sunglasses
+
+btn5.addEventListener(`click`, function ()
+{
+    if (speed >= (50))
+    {
         speed = speed - (50);
         img.src = `Level6.png`;
         btn5.style.display = "none";
     }
-    document.querySelector(`#score`).innerHTML = speed;
+    totalSpeedScore.innerHTML = speed;
 })
+
+
+
+
+
 
 
 
 // Auto Clicker -----
+// Street credz button
+// Automatic "clicker"
+
 
 let autoClicker = 0;
 
-let autoUpdateBtn = document.querySelector(`#streetCredBtn`)
+const autoCLickButton = document.querySelector(`#autoClickBtn`)
+const levelAutoClick = document.querySelector(`#autoClickLevel`)
+const costAutoCLick = document.querySelector(`#autoClickCost`)
 
-autoUpdateBtn.addEventListener(`click`, function (){
-    if (speed >= ((autoClicker + 1) * 50)) {
-        speed = speed - (autoClicker + 1) * 50;
+/*
+
+setInterval(function ()
+    {
+        totalSpeedScore.innerHTML += 1
+    }, 1000);
+
+ */
+
+
+autoCLickButton.addEventListener(`click`, function ()
+{
+    if (speed >= ((autoClicker + 1) * 10))
+    {
+        speed = speed - (autoClicker + 1) * 10;
         autoClicker = autoClicker + 1;
     }
-    document.querySelector(`#score`).innerHTML = speed;
-    document.querySelector(`#streetCredLevel`).innerHTML = autoClicker;
-    document.querySelector(`#nextLevelCost`).innerHTML = (autoClicker + 1) * 50;
+    totalSpeedScore.innerHTML = speed;
+    levelAutoClick.innerHTML = autoClicker;
+    costAutoCLick.innerHTML = (autoClicker + 1) * 10;
 })
 
 
 
+
+
+
+
+
+
 // Multi Clicker -----
+// Multi click button
+// Lets every click have more value
+
 
 let multiClicker = 0;
 
-let multiClickBtn = document.querySelector(`#multiClickBtn`)
+const multiClickBtn = document.querySelector(`#multiClickBtn`)
+const amountOfMultiCLick = document.querySelector(`#multiClick`)
+const costOfMultiClick = document.querySelector(`#multiClickCost`)
 
-multiClickBtn.addEventListener(`click`, function (){
-    if (speed >= ((multiClicker + 1) * 25)) {
-        speed = speed - (multiClicker + 1) * 25;
+multiClickBtn.addEventListener(`click`, function ()
+{
+    if (speed >= ((multiClicker + 1) * 10))
+    {
+        speed = speed - (multiClicker + 1) * 10;
         multiClicker = multiClicker + 1;
     }
-    document.querySelector(`#score`).innerHTML = speed;
-    document.querySelector(`#multiClick`).innerHTML = multiClicker;
-    document.querySelector(`#multiClickCost`).innerHTML = (multiClicker + 1) * 25;
+    totalSpeedScore.innerHTML = speed;
+    amountOfMultiCLick.innerHTML = multiClicker;
+    costOfMultiClick.innerHTML = (multiClicker + 1) * 10;
 })
