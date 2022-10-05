@@ -82,9 +82,9 @@ btn3.addEventListener(`click`, function ()
 
 btn4.addEventListener(`click`, function ()
 {
-    if (speed >= (50000))
+    if (speed >= (30000))
     {
-        speed = speed - (50000);
+        speed = speed - (30000);
         img.src = `Level5.png`;
         btn4.style.display = "none";
     }
@@ -95,9 +95,9 @@ btn4.addEventListener(`click`, function ()
 
 btn5.addEventListener(`click`, function ()
 {
-    if (speed >= (100000))
+    if (speed >= (75000))
     {
-        speed = speed - (100000);
+        speed = speed - (75000);
         img.src = `Level6.png`;
         btn5.style.display = "none";
     }
@@ -124,9 +124,9 @@ const costAutoCLick = document.querySelector(`#autoClickCost`)
 
 autoCLickButton.addEventListener(`click`, function ()
 {
-    if (speed >= ((autoClicker + 1) * 75))
+    if (speed >= ((autoClicker + 1) * 65))
     {
-        speed = speed - (autoClicker + 1) * 75;
+        speed = speed - (autoClicker + 1) * 65;
         autoClicker = autoClicker + 1;
         setInterval(function ()
         {
@@ -135,7 +135,7 @@ autoCLickButton.addEventListener(`click`, function ()
     }
     totalSpeedScore.innerHTML = speed;
     levelAutoClick.innerHTML = autoClicker;
-    costAutoCLick.innerHTML = (autoClicker + 1) * 75;
+    costAutoCLick.innerHTML = (autoClicker + 1) * 65;
 })
 
 
@@ -160,9 +160,9 @@ const costOfMultiClick = document.querySelector(`#multiClickCost`)
 
 multiClickBtn.addEventListener(`click`, function ()
 {
-    if (speed >= ((multiClicker + 1) * 10))
+    if (speed >= ((multiClicker + 1) * 35))
     {
-        speed = speed - (multiClicker + 1) * 10;
+        speed = speed - (multiClicker + 1) * 35;
         multiClicker = multiClicker + 1;
     }
         sunGlassClicker.addEventListener(`click`, function ()
@@ -171,5 +171,5 @@ multiClickBtn.addEventListener(`click`, function ()
         })
     totalSpeedScore.innerHTML = speed;
     amountOfMultiCLick.innerHTML = multiClicker;
-    costOfMultiClick.innerHTML = (multiClicker + 1) * 10;
+    costOfMultiClick.innerHTML = (multiClicker + 1) * 35;
 })
