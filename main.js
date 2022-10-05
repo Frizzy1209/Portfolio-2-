@@ -43,9 +43,9 @@ const btn5 = document.querySelector(`#btn5`)
 
 btn1.addEventListener(`click`, function ()
 {
-    if (speed >= (10))
+    if (speed >= (500))
     {
-        speed = speed - (10);
+        speed = speed - (500);
         img.src = `Level2.png`;
         btn1.style.display = "none";
     }
@@ -56,9 +56,9 @@ btn1.addEventListener(`click`, function ()
 
 btn2.addEventListener(`click`, function ()
 {
-    if (speed >= (20))
+    if (speed >= (1000))
     {
-        speed = speed - (20);
+        speed = speed - (1000);
         img.src = `Level3.1.png`;
         btn2.style.display = "none";
     }
@@ -69,9 +69,9 @@ btn2.addEventListener(`click`, function ()
 
 btn3.addEventListener(`click`, function ()
 {
-    if (speed >= (30))
+    if (speed >= (10000))
     {
-        speed = speed - (30);
+        speed = speed - (10000);
         img.src = `Level4.png`;
         btn3.style.display = "none";
     }
@@ -82,9 +82,9 @@ btn3.addEventListener(`click`, function ()
 
 btn4.addEventListener(`click`, function ()
 {
-    if (speed >= (40))
+    if (speed >= (50000))
     {
-        speed = speed - (40);
+        speed = speed - (50000);
         img.src = `Level5.png`;
         btn4.style.display = "none";
     }
@@ -95,9 +95,9 @@ btn4.addEventListener(`click`, function ()
 
 btn5.addEventListener(`click`, function ()
 {
-    if (speed >= (50))
+    if (speed >= (100000))
     {
-        speed = speed - (50);
+        speed = speed - (100000);
         img.src = `Level6.png`;
         btn5.style.display = "none";
     }
