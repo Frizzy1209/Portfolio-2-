@@ -125,18 +125,18 @@ const costAutoCLick = document.querySelector(`#autoClickCost`)
 
 autoCLickButton.addEventListener(`click`, function ()
 {
-    if (speed >= ((autoClicker + 1) * 10))
+    if (speed >= ((autoClicker + 1) * 75))
     {
-        speed = speed - (autoClicker + 1) * 10;
+        speed = speed - (autoClicker + 1) * 75;
         autoClicker = autoClicker + 1;
+        setInterval(function ()
+        {
+            totalSpeedScore.innerHTML = speed++
+        }, 2000);
     }
-    setInterval(function ()
-    {
-        totalSpeedScore.innerHTML++
-    }, 1000);
     totalSpeedScore.innerHTML = speed;
     levelAutoClick.innerHTML = autoClicker;
-    costAutoCLick.innerHTML = (autoClicker + 1) * 10;
+    costAutoCLick.innerHTML = (autoClicker + 1) * 75;
 })
 
 
