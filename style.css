@@ -7,11 +7,14 @@ body {
     rgba(247,136,255,1) 100%);
 }
 
+
+
 #sunGlass {
     height: 220px;
     width: 435px;
     cursor: pointer;
 }
+
 
 
 header {
@@ -22,7 +25,10 @@ header {
     text-align: center;
 }
 
-
+.openPopUp {
+    font-size: 20px;
+    color: palevioletred;
+}
 
 .popUpInfo {
     position: fixed;
@@ -36,6 +42,8 @@ header {
 
     z-index: 10;
 
+    width: 800px;
+    max-width: 50%;
     background-color: white;
 
     font-family: fast-trackregular;
@@ -113,12 +121,16 @@ h1 {
     -webkit-text-fill-color: transparent;
 }
 
+
+
 .headerParagraph {
     font-family: fast-trackregular;
     font-size: 27px;
     color: white;
 
 }
+
+
 
 main {
     display: flex;
@@ -133,11 +145,15 @@ main {
     color: white;
 }
 
+
+
 .openPopUp {
     display: flex;
     align-self: flex-start;
     margin-left: 60px;
 }
+
+
 
 .streetCred {
     padding: 7px 20px;
@@ -153,6 +169,8 @@ main {
     align-self: flex-end;
     margin-right: 100px;
 }
+
+
 
 .multiClick {
     padding: 7px 20px;
@@ -203,6 +221,7 @@ button:hover {
             rgba(44,187,99,.25) 0 16px 32px;
     transform: scale(1.05) rotate(-1deg);
 }
+
 
 
 .music1 {
