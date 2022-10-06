@@ -29,10 +29,64 @@ sunGlassClicker.addEventListener
 
 
 
+// Audio player ------
+
+const playMusic1 = document.querySelector(`#playMusic1`)
+const playMusic2 = document.querySelector(`#playMusic2`)
+const playMusic3 = document.querySelector(`#playMusic3`)
+
+const playBtn1 = document.querySelector(`#play1`)
+const pauseBtn1 = document.querySelector(`#pause1`)
+
+const playBtn2 = document.querySelector(`#play2`)
+const pauseBtn2 = document.querySelector(`#pause2`)
+
+const playBtn3 = document.querySelector(`#play3`)
+const pauseBtn3 = document.querySelector(`#pause3`)
+
+function playAudio1 (){
+    playMusic1.play();
+}
+
+function pauseAudio1 (){
+    playMusic1.pause()
+}
+
+function playAudio2 (){
+    playMusic2.play();
+}
+
+function pauseAudio2 (){
+    playMusic2.pause()
+}
+
+function playAudio3 (){
+    playMusic3.play();
+}
+
+function pauseAudio3 (){
+    playMusic3.pause()
+}
+
+
+playBtn1.addEventListener(`click`, playAudio1)
+pauseBtn1.addEventListener(`click`, pauseAudio1)
+
+playBtn2.addEventListener(`click`, playAudio2)
+pauseBtn2.addEventListener(`click`, pauseAudio2)
+
+playBtn3.addEventListener(`click`, playAudio3)
+pauseBtn3.addEventListener(`click`, pauseAudio3)
+
+
 // Upgrade Buttons -----
 // The buttons that lets you change teh sunglasses
 
 const img = document.querySelector(`#sunGlass`)
+
+const classMusic1 = document.querySelector(`.music1`)
+const classMusic2 = document.querySelector(`.music2`)
+const classMusic3 = document.querySelector(`.music3`)
 
 const btn1 = document.querySelector(`#btn1`)
 const btn2 = document.querySelector(`#btn2`)
@@ -51,6 +105,7 @@ btn1.addEventListener
             speed = speed - (500);
             img.src = `Level2.png`;
             btn1.style.display = "none";
+            classMusic1.style.visibility = "visible"
         }
         totalSpeedScore.innerHTML = speed;
     }
@@ -61,9 +116,9 @@ btn1.addEventListener
 btn2.addEventListener
 (`click`, function ()
     {
-        if (speed >= (1000))
+        if (speed >= (1500))
         {
-            speed = speed - (1000);
+            speed = speed - (1500);
             img.src = `Level3.1.png`;
             btn2.style.display = "none";
         }
@@ -76,11 +131,12 @@ btn2.addEventListener
 btn3.addEventListener
 (`click`, function ()
     {
-        if (speed >= (10000))
+        if (speed >= (5000))
         {
-            speed = speed - (10000);
+            speed = speed - (5000);
             img.src = `Level4.png`;
             btn3.style.display = "none";
+            classMusic2.style.visibility = "visible"
         }
         totalSpeedScore.innerHTML = speed;
     }
@@ -91,9 +147,9 @@ btn3.addEventListener
 btn4.addEventListener
 (`click`, function ()
     {
-        if (speed >= (30000))
+        if (speed >= (15000))
         {
-            speed = speed - (30000);
+            speed = speed - (15000);
             img.src = `Level5.png`;
             btn4.style.display = "none";
         }
@@ -106,11 +162,12 @@ btn4.addEventListener
 btn5.addEventListener
 (`click`, function ()
     {
-        if (speed >= (75000))
+        if (speed >= (25000))
         {
-            speed = speed - (75000);
+            speed = speed - (25000);
             img.src = `Level6.png`;
             btn5.style.display = "none";
+            classMusic3.style.visibility = "visible"
         }
         totalSpeedScore.innerHTML = speed;
     }
@@ -141,7 +198,7 @@ autoCLickButton.addEventListener
             setInterval(function ()
             {
                 totalSpeedScore.innerHTML = speed++
-            }, 2000);
+            }, 1000);
         }
         totalSpeedScore.innerHTML = speed;
         levelAutoClick.innerHTML = autoClicker;
