@@ -9,10 +9,33 @@
     <body>
         <header>
             <h1> Hurtigbrille' Clicker </h1>
+
                 <div class="headerParagraph">
                     <p>Click on the SunGlasses to Get Speed!
                         <br> The More Clicks! the More Speed!</p>
                 </div>
+
+            <button class="openPopUp"> Rules and Info </button>
+            <div class="popUpInfo" id="popUpInfo">
+                <div class="popUpHeader">
+                    <div class="popUpTitle"> Rules & Info </div>
+                    <button class="closePopUpBtn"> &times; </button>
+                </div>
+                <div class="popUpText">
+                    <p> You will earn speed by clicking on the sunglasses! </p>
+                    <p> You can then use the speed to change your sunglasses or upgrade your clicker</p>
+                    <br>
+                    <p> The Buttons below the sunglasses will change the sunglasses,
+                        but they do also hide some surprises </p>
+                    <br>
+                    <p> Multi click will give you more speed per click </p>
+                    <p> Each level gives your click and extra click </p>
+                    <br>
+                    <p> Streed Credz will do the clicking for you </p>
+                    <p> Each level will add an extra click per second </p>
+                </div>
+            </div>
+
         </header>
 
         <main>
@@ -57,21 +80,22 @@
                 <button id="play1"> Play </button>
                 <button id="pause1"> Pause </button>
             </div>
-                <audio id="playMusic1" src="Ranji-Lightning.mp3"> </audio>
+                <audio id="playMusic1" loop="" src="Ranji-Lightning.mp3"> </audio>
 
             <div class="music2">
                 <button id="play2"> Play </button>
                 <button id="pause2"> Pause </button>
             </div>
-                <audio id="playMusic2" src="UnderCover-Chapati.mp3"> </audio>
+                <audio id="playMusic2" loop="" src="UnderCover-Chapati.mp3"> </audio>
 
             <div class="music3">
                 <button id="play3"> Play </button>
                 <button id="pause3"> Pause </button>
             </div>
-                <audio id="playMusic3" src="MammaMia-ClaudinhoBrasil-Harmonika.mp3"> </audio>
+                <audio id="playMusic3" loop="" src="MammaMia-ClaudinhoBrasil-Harmonika.mp3"> </audio>
 
         </main>
+        <div id="overlay"> </div>
 
         <script src="main.js"> </script>
     </body>

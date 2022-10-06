@@ -29,6 +29,33 @@ sunGlassClicker.addEventListener
 
 
 
+// Info & Rules window
+// pop up window with the rules
+
+const openInfoRulesBtn = document.querySelector(`.openPopUp`)
+const closeInfoRulesBtn = document.querySelector(`.closePopUpBtn`)
+const showInfoRulesPopUp = document.querySelector(`.popUpInfo`)
+const overlay = document.querySelector(`#overlay`)
+
+openInfoRulesBtn.addEventListener
+(`click`, function()
+    {
+        if (showInfoRulesPopUp == null) return
+        showInfoRulesPopUp.classList.add(`active`)
+        overlay.classList.add(`active`)
+    }
+)
+
+closeInfoRulesBtn.addEventListener(`click`, function (){
+    if (showInfoRulesPopUp == null) return
+    showInfoRulesPopUp.classList.remove(`active`)
+    overlay.classList.remove(`active`)
+})
+
+
+
+
+
 // Audio player ------
 
 const playMusic1 = document.querySelector(`#playMusic1`)
@@ -77,6 +104,9 @@ pauseBtn2.addEventListener(`click`, pauseAudio2)
 
 playBtn3.addEventListener(`click`, playAudio3)
 pauseBtn3.addEventListener(`click`, pauseAudio3)
+
+
+
 
 
 // Upgrade Buttons -----

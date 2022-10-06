@@ -9,6 +9,7 @@ body {
     cursor: pointer;
 }
 
+
 header {
     display: flex;
     flex-direction: column;
@@ -17,12 +18,93 @@ header {
     text-align: center;
 }
 
+
+
+.popUpInfo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+
+    border: 1px black;
+    border-radius: 10px;
+
+    z-index: 10;
+
+    background-color: palevioletred;
+    width: 500px;
+    max-width: 80%;
+
+    font-family: fast-trackregular;
+}
+
+.popUpInfo.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popUpHeader {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px black;
+
+    background: -webkit-linear-gradient(#00b3e0, #5eff4a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.popUpTitle {
+    font-size: 1.50rem;
+    font-weight: bold;
+}
+
+.closePopUpBtn {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.popUpText {
+    padding: 10px 15px;
+
+    font-size: 1.25rem;
+
+    background: -webkit-linear-gradient(#00b3e0, #5eff4a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0, .5);
+
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+
 h1 {
     font-family: sportyporegular;
     font-size: 60px;
     font-weight: bold;
 
-    margin-bottom: 1px;
+    margin: 3px;
     padding: 5px;
     background: -webkit-linear-gradient(#00b3e0, #5eff4a);
     -webkit-background-clip: text;
@@ -33,6 +115,7 @@ h1 {
     font-family: fast-trackregular;
     font-size: 27px;
     color: white;
+
 }
 
 main {
@@ -48,6 +131,11 @@ main {
     color: white;
 }
 
+.openPopUp {
+    display: flex;
+    align-self: flex-start;
+    margin-left: 60px;
+}
 
 .streetCred {
     padding: 7px 20px;
@@ -111,7 +199,7 @@ button:hover {
     align-items: center;
 
     align-self: flex-start;
-    margin-top: 430px;
+    margin-top: 420px;
     margin-left: 100px;
 
     visibility: hidden;
@@ -125,7 +213,7 @@ button:hover {
     align-items: center;
 
     align-self: center;
-    margin-top: 430px;
+    margin-top: 420px;
 
     visibility: hidden;
 }
@@ -138,7 +226,7 @@ button:hover {
     align-items: center;
 
     align-self: flex-end;
-    margin-top: 430px;
+    margin-top: 420px;
     margin-right: 100px;
 
     visibility: hidden;
